@@ -52,14 +52,37 @@ Y0=s1′s0′I <br>
 
 
 ## Program:
+module exp7a(S1,S0,I0,I1,I2,I3,Y);
+input S1,S0,I0,I1,I2,I3;
+output Y;
+assign y=((~S1)&(~S0)&I0)|((~S1)&S0&I1)|S1&(~S0)&I2|(S1&(~S0)&I3);
+endmodulemodule
+
+exp7b(S1,S0,I,Y0,Y1,Y2,Y3);
+input I,S0,S1;
+output Y0,Y1,Y2,Y3;
+assign y=(~S1)&(~S0)&I;
+assign y=(~S1)&S0&I;
+assign y=S1&(~S0)&I;
+assign y=S1&S0&I;
+endmodule
 
 
-## RTL Schematic:
+
+## RTL Schematic
+![image](https://github.com/PresillaMary/Mux-Demux/assets/129305503/3f8f0f51-716e-47f0-b4f7-03d4e65e3bb6)
+
+
+![image](https://github.com/PresillaMary/Mux-Demux/assets/129305503/c7aa56b2-6f0c-4dce-be9f-085d24b0ac4c)
+
+
 
 
 
 
 ## Timing Diagram:
+
+![image](https://github.com/PresillaMary/Mux-Demux/assets/129305503/f089e79a-f804-4360-94fe-fe1e1701c6d3)
 
 
 
